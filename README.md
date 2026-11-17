@@ -151,7 +151,7 @@ GitHub Actions runs the Playwright test suite on a GitHub-hosted Ubuntu runner.
 | Push | Automatically runs on pushes to `main` or `master` |
 | Pull Request | Runs on pull requests targeting `main` or `master` |
 | Manual | GitHub Actions → Playwright Tests → Run workflow |
-| Scheduled | Configured daily at 22:23 Asia/Seoul (13:23 UTC) on the default branch |
+| Scheduled | Configured daily at 03:23 Asia/Seoul on the default branch |
 
 ### Workflow Steps
 
@@ -182,7 +182,7 @@ GitHub Actions sends structured notifications using **Slack Incoming Webhooks an
 
 The message includes the job result, execution trigger, and a link to the GitHub Actions run. When `test-results/playwright-summary.json` is available, the message also includes the passed, failed, skipped, and flaky counts across all three browser projects and the Playwright execution duration.
 
-Slack delivery with test counts and duration was verified on a successful push run. Scheduled execution and Slack delivery on failure are pending verification.
+Slack delivery with test counts and duration was verified on a successful push run. A [scheduled run](https://github.com/siyeon98/restful-booker-ui-automation/actions/runs/43998959820) completed successfully on November 17, 2026. Scheduled runs may start after the configured time. Slack delivery for a failed workflow run remains unverified.
 
 ## Known Limitations
 
@@ -204,7 +204,7 @@ Slack delivery with test counts and duration was verified on a successful push r
 await expect(page).toHaveURL(/\/admin\/rooms\/?$/);
 ```
 
-**Verification:** The logout test passed five consecutive repetitions. The exact root cause was not conclusively established.
+
 
 ## Security
 
