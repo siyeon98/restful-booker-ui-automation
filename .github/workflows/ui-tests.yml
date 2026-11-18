@@ -1,10 +1,10 @@
-name: Playwright Tests
+name: Restful Booker UI Tests
 
 on:
   push:
-    branches: [ main, master ]
+    branches: [main]
   pull_request:
-    branches: [ main, master ]
+    branches: [main]
   workflow_dispatch:
   schedule:
     - cron: '23 3 * * *'
@@ -12,6 +12,7 @@ on:
 
 jobs:
   test:
+    name: UI Tests
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
